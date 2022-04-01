@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../type_arguments.ts"],
+  "sourcesContent": ["interface Person {\n  age: number; \n  name: string;\n}\n\ndeclare const person: Person;\n\nfunction get<T, K extends keyof T>(object: T, key: K): T[K]{\n  return object[key];\n}\n\nfunction pick<T, K extends keyof T>(arr: T[], key:K):T[K][]{\n  let result: T[K][] = [];\n  for(let item in arr){\n      result.append(item[key]);\n  }\n  return result;\n}"],
+  "mappings": "AAOA,aAAmC,QAAW,KAAa;AACzD,SAAO,OAAO;AAAA;AAGhB,cAAoC,KAAU,KAAa;AACzD,MAAI,SAAiB;AACrB,WAAQ,QAAQ,KAAI;AAChB,WAAO,OAAO,KAAK;AAAA;AAEvB,SAAO;AAAA;",
+  "names": []
+}
